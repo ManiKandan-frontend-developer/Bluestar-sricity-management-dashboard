@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Regular.ttf") format("truetype");
+}
+ .ant-badge-status-success{
+  width: 21px !important;
+  height: 21px !important;
+}
+.ant-badge-status-error{
+  width: 21px !important;
+  height: 21px !important;
+}
+.ant-badge-status-warning{
+  width: 21px !important;
+  height: 21px !important;
+}
+.success .ant-badge-status-success{
+  width: 14px !important;
+  height: 14px !important;
+}
+.error .ant-badge-status-error{
+  width: 14px !important;
+  height: 14px !important;
+}
+.warning .ant-badge-status-warning{
+  width: 14px !important;
+  height: 14px !important;
+}
+.ant-badge-status-dot{
+  width: 12px !important;
+  height: 12px !important;
+}
+
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.blink {
+  animation: blink 1.5s infinite;
+}
+
+.custom-tooltip{
+  background: rgb(0 0 0 / 85%);
+  color: white;
+  padding: 10px 15px;
+  line-height: 22px
+}
+
+.tooltip-title
+{
+  font-weight: bold;
+}
