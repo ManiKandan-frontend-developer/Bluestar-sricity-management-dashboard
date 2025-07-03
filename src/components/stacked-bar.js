@@ -2,23 +2,7 @@ import React from "react";
 import ReactApexChart from "react-apexcharts";
 
 // Your production data
-const productionData = [
-  { MachineName: "IDU Line", PartCount: 0, Shift: "Shift B" },
-  { MachineName: "IDU Line", PartCount: 0, Shift: "Shift A" },
-  { MachineName: "IDU Line", PartCount: 0, Shift: "Shift C" },
-  { MachineName: "ODU Line", PartCount: 0, Shift: "Shift B" },
-  { MachineName: "ODU Line", PartCount: 0, Shift: "Shift A" },
-  { MachineName: "ODU Line", PartCount: 0, Shift: "Shift C" },
-  { MachineName: "IDU Line 2", PartCount: 0, Shift: "Shift B" },
-  { MachineName: "IDU Line 2", PartCount: 0, Shift: "Shift A" },
-  { MachineName: "IDU Line 2", PartCount: 0, Shift: "Shift C" },
-  { MachineName: "ODU Line 2", PartCount: 0, Shift: "Shift B" },
-  { MachineName: "ODU Line 2", PartCount: 0, Shift: "Shift A" },
-  { MachineName: "ODU Line 2", PartCount: 0, Shift: "Shift C" },
-  { MachineName: "CSAC Line", PartCount: 116, Shift: "Shift B" },
-  { MachineName: "CSAC Line", PartCount: 25, Shift: "Shift A" },
-  { MachineName: "CSAC Line", PartCount: 1, Shift: "Shift C" },
-];
+
 
 // Map long names to short names
 const lineNameMap = {

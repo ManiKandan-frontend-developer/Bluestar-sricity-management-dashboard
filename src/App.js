@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Col, Divider, Image, Row, Typography, Spin, Progress, Badge ,Button, Modal, Form, Input, message,Tag } from 'antd';
+import { Col, Image, Row, Typography, Spin ,Button, Modal, Form, Input, message } from 'antd';
 import Logo from './images/Bluestar logo.png';
 import { CiBoxList } from "react-icons/ci";
-import {MinusOutlined} from "@ant-design/icons"
-import RadialBar from './components/radial-bar';
 import BarChart from './components/react-barchat';
 import ThingworxService from './services/thingwork-service';
-import bad from "./images/bad.png";
-import avg from "./images/avg.png";
-import good from "./images/good.png";
-import DonutChart from './components/donut-bar';
 import MonthlyChart from './components/monthly-production-chart';
 import VerticalGroupedBarChart from './components/stacked-bar';
 
@@ -131,7 +125,7 @@ class App extends Component {
           this.thingworxService
       .getTarget({IDU_Target:values?.IDU, ODU_Target:values?.ODU,IDU2_Target:values?.IDU2,ODU2_Target:values?.ODU2,CSAC_Target:values?.CSAC})
       .then((response) => {
-        if(response.data.rows?.[0]?.result == "Updated Successfully"){
+        if(response.data.rows?.[0]?.result === "Updated Successfully"){
          message.success("Updated Successfully")
         }
         // this.setState({ IDUdata: response.data.rows });
@@ -484,7 +478,7 @@ const shiftCODU = this.state?.monthdata?.find((e) => {
   };
   normalizeShift = (shift) => {
     if (!shift || shift === "N/A") return "";
-    const [first, second] = shift.trim().split(" ");
+    const [first, ] = shift.trim().split(" ");
     return `Shift ${first}`;
   }
    buildMatrix = (data) => {
@@ -500,8 +494,6 @@ const shiftCODU = this.state?.monthdata?.find((e) => {
     });
   };
   render() {
-   
-    const matrix  = this.buildMatrix(this.state?.AllDataYest);
     console.log("monthdata",this.state?.monthdata)
     console.log("sujithtarget: ", this.state.dailyProdDate)
     const categories = ["IDU", "ODU", "IDU2", "ODU2", "CSAC"];
@@ -525,9 +517,8 @@ const labelMap = {
   CSAC: "CSAC"
 };
 
-    const value = 1700;
-    const maxValue = 2000;
-    const percentage = (value / maxValue) * 100;
+ 
+   
 
     console.log("this.state?.ODUdata?.[1]?.BShift_Count", this.state?.ODUdata)
 
