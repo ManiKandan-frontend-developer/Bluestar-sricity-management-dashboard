@@ -113,20 +113,6 @@ const BarChart = ({ data, categories, title, width, color }) => {
       data: data ? data : [],
     },
   ];
-  const getChartHeight = () => {
-    // You can adjust these values based on your design requirements
-    if (window.innerWidth >= 1700) {
-      return 300;
-    } else if (window.innerWidth >= 1470) {
-      return 250;
-    } else if (window.innerWidth >= 1350) {
-      return 210;
-    } else if (window.innerWidth >= 768) {
-      return 210;
-    } else {
-      return 200;
-    }
-  };
   
   return (
     <ReactApexChart
