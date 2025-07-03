@@ -44,7 +44,7 @@ const VerticalGroupedBarChart = (props) => {
     plotOptions: {
       bar: {
         horizontal: false,
-        columnWidth: "60%",
+        columnWidth: "80%",
         dataLabels: {
           position: "top", // ✅ key for vertical bars
         },
